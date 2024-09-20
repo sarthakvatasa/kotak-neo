@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPIN Protected Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Roboto', sans-serif;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #2C2C2C;
+            color: #FFF;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00AEEF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #00AEEF;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.ibb.co/Vt3N3P5/logo.png" alt="Logo" style="width:100px;">
+        <h2>Hi BRAJ</h2>
+        <p>Welcome back</p>
+        <input type="password" id="mpin" placeholder="Enter 6 digit MPIN">
+        <button onclick="checkMPIN()">Submit</button>
+        <div class="links">
+            <a href="#">Forgot M-PIN?</a> | <a href="#">Add Account</a>
+        </div>
+    </div>
+
+    <script>
+        function checkMPIN() {
+            var mpin = document.getElementById("mpin").value;
+            if (mpin === "869500") { // Updated MPIN to 869500
+                window.location.href = "https://finvedas.com/dashboard/RELIANCE"; // Redirect to finvedas.com/dashboard/RELIANCE
+            } else {
+                alert("Incorrect MPIN. Try again.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
